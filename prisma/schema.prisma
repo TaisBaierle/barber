@@ -1,0 +1,74 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())//@id é a chave primária e uuid() é uma função que gera um id único
+  name      String
+  email     String
+  address    String?  //? reapresenta que é opcional
+  password  String
+stripe_customer_id String?
+created_at DateTime @default(now())//DateTime é um tipo de dado que representa uma data e hora
+updated_at DateTime @default(now()) 
+
+@@map("users")
+subscriptions Subscription? //subscriptions é uma relação com a tabela Subscription
+haircuts Haircut[] //haircuts é uma relação com a tabela Haircut
+services Service[] //services é uma relação com a tabela Service
+//o array [] significa que é uma relação de 1 para muitos
+}
+
+model Subscription {
+  id          String   @id
+  status      String
+  priceId     String
+  created_at  DateTime @default(now())
+  updated_at  DateTime @default(now())
+
+  @@map("subscriptions")
+
+  userId String @unique //userId é uma chave estrangeira que se relaciona com o id da tabela User
+  User User @relation(fields: [userId], references: [id])//User é o nome da tabela que se relaciona com a tabela Subscription
+}
+
+model Haircut {
+  id          String   @id @default(uuid())//@id é a chave primária e uuid() é uma função que gera um id único
+  name        String
+  price       Float
+  status      Boolean @default(true)//default(true) significa que o valor padrão é true
+  created_at  DateTime @default(now())
+  updated_at  DateTime @default(now())
+
+  @@map("haircuts")
+  user User @relation(fields: [userId], references: [id])//user é uma relação com a tabela User
+  userId String //userId é uma chave estrangeira que se relaciona com o id da tabela User
+  services Service[] //services é uma relação com a tabela Service
+}//o array [] significa que é uma relação de 1 para muitos
+
+model Service {
+  id          String   @id @default(uuid())
+  customer    String
+  status      Boolean @default(true)
+  created_at  DateTime @default(now())
+  updated_at  DateTime @default(now())
+
+  @@map("services")
+  haircut Haircut @relation(fields: [haircutId], references: [id])//haircut é uma relação com a tabela Haircut
+  haircutId String //haircutId é uma chave estrangeira que se relaciona com o id da tabela Haircut
+  user User @relation(fields: [userId], references: [id])//user é uma relação com a tabela User
+  userId String //userId é uma chave estrangeira que se relaciona com o id da tabela User
+}
+
+
