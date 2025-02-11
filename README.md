@@ -36,7 +36,7 @@ git clone https://github.com/TaisBaierle/baber.git
 ```
 
 ### 🔧 Configuração do Ambiente
-Crie um arquivo \.env\ na raiz do projeto e configure as variáveis:
+Crie um arquivo .env na raiz do projeto e configure as variáveis:
 ```env
 DATABASE_URL=postgres://usuario:senha@localhost:5432/baber
 PORT=3000
