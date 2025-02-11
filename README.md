@@ -1,6 +1,6 @@
 # Baber - Gerenciamento de Barbearia
 
-![Baber Logo](https://via.placeholder.com/600x200?text=Baber+Logo)
+![Header (1)](https://github.com/user-attachments/assets/23d23219-ab04-4d17-8d1f-3d28cb85f869)
 
 ## 🏠 Sobre o projeto
 
