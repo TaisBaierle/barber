@@ -31,32 +31,32 @@ Certifique-se de ter instalado na sua máquina:
 - Yarn ou NPM
 
 ### 📥 Clonar o Repositório
-\`\`\`bash
+```bash
 git clone https://github.com/TaisBaierle/baber.git
-\`\`\`bash
+```
 
 ### 🔧 Configuração do Ambiente
 Crie um arquivo \`.env\` na raiz do projeto e configure as variáveis:
-\`\`\`env
+```env
 DATABASE_URL=postgres://usuario:senha@localhost:5432/baber
 PORT=3000
 JWT_SECRET=sua_chave_secreta
-\`\`\`
+```
 
 ### 📦 Instalar Dependências
-\`\`\`bash
+```bash
 yarn install # ou npm install
-\`\`\`
+```
 
 ### 🗄️ Rodar o Banco de Dados (Migrations Prisma)
-\`\`\`bash
+```bash
 npx prisma migrate dev
-\`\`\`
+```
 
 ### 🚀 Iniciar o Servidor
-\`\`\`bash
+```bash
 yarn dev # ou npm run dev
-\`\`\`
+```
 
 O servidor estará rodando em \`http://localhost:3000\`.
 
