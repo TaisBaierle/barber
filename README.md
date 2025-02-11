@@ -36,7 +36,7 @@ git clone https://github.com/TaisBaierle/baber.git
 ```
 
 ### 🔧 Configuração do Ambiente
-Crie um arquivo \`.env\` na raiz do projeto e configure as variáveis:
+Crie um arquivo \.env\ na raiz do projeto e configure as variáveis:
 ```env
 DATABASE_URL=postgres://usuario:senha@localhost:5432/baber
 PORT=3000
@@ -58,7 +58,7 @@ npx prisma migrate dev
 yarn dev # ou npm run dev
 ```
 
-O servidor estará rodando em \`http://localhost:3000\`.
+O servidor estará rodando em \http://localhost:3000\.
 
 ## 📜 Licença
 Este projeto está licenciado sob a **MIT License**. Sinta-se à vontade para usá-lo e contribuir!
