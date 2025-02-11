@@ -58,7 +58,7 @@ npx prisma migrate dev
 yarn dev ou npm run dev
 ```
 
-O servidor estará rodando em http://localhost:3000\.
+O servidor estará rodando em http://localhost:3000.
 
 ## 📜 Licença
 Este projeto está licenciado sob a **MIT License**. Sinta-se à vontade para usá-lo e contribuir!
