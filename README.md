@@ -31,8 +31,9 @@ Certifique-se de ter instalado na sua máquina:
 - Yarn ou NPM
 
 ### 📥 Clonar o Repositório
-```bash
+\`\`\`bash
 git clone https://github.com/TaisBaierle/baber.git
+\`\`\`bash
 
 ### 🔧 Configuração do Ambiente
 Crie um arquivo \`.env\` na raiz do projeto e configure as variáveis:
