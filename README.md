@@ -45,7 +45,7 @@ JWT_SECRET=sua_chave_secreta
 
 ### 📦 Instalar Dependências
 ```bash
-yarn install # ou npm install
+yarn install ou npm install
 ```
 
 ### 🗄️ Rodar o Banco de Dados (Migrations Prisma)
@@ -55,7 +55,7 @@ npx prisma migrate dev
 
 ### 🚀 Iniciar o Servidor
 ```bash
-yarn dev # ou npm run dev
+yarn dev ou npm run dev
 ```
 
 O servidor estará rodando em http://localhost:3000\.
