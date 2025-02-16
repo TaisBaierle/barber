@@ -7,7 +7,7 @@ class DetailUserController {
         
         const userDetailService = new UserDetailService();// cria uma instância da classe de detalhamento de usuário
 
-        const detailUser = await userDetailService.execute();
+        const detailUser = await userDetailService.execute(user_id);
 
         return res.json(detailUser);
     }
